@@ -61,7 +61,7 @@ extension NSMutableParagraphStyle {
         return clone
     }
     
-    private func cloneParagraphStyle(other: NSMutableParagraphStyle) -> NSMutableParagraphStyle {
+    private func cloneParagraphStyle(_ other: NSMutableParagraphStyle) -> NSMutableParagraphStyle {
         alignment              = other.alignment
         firstLineHeadIndent    = other.firstLineHeadIndent
         headIndent             = other.headIndent
