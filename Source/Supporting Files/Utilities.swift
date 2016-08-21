@@ -39,7 +39,7 @@
 #endif
 
 extension NSRange {
-    init(_ range: Range<Int>) {
+    init(_ range: CountableClosedRange<Int>) {
         self = NSRange(location: range.first ?? 0, length: range.count)
     }
     
@@ -55,7 +55,7 @@ extension NSMutableParagraphStyle {
         if #available(iOS 9.0, *) {
             clone.setParagraphStyle(self)
         } else {
-            clone.cloneParagraphStyle(self)
+            _ = clone.cloneParagraphStyle(self)
         }
         
         return clone

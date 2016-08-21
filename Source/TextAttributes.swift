@@ -53,7 +53,7 @@ public enum TextEffect {
 
 public class TextAttributes {
     /// The attributes dictionary.
-    public private(set) var dictionary: [String: AnyObject] = [:]
+    public fileprivate(set) var dictionary: [String: AnyObject] = [:]
     
     /**
      Create an instance of TextAttributes with a base.
@@ -618,7 +618,7 @@ public class TextAttributes {
             }
         }
         set {
-            dictionary[NSLinkAttributeName] = newValue
+            dictionary[NSLinkAttributeName] = newValue as AnyObject
         }
     }
     
